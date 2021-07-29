@@ -15,12 +15,17 @@ namespace To_Do_Note_Net_Core_5_API.Repository
         {
             _db = db;
         }
-        public async Task<List<NoteModel>> AllNotes()
+        public async Task<List<NoteModel>> GetAll()
         {
             return (await _db.noteModels.ToListAsync());
         }
 
-        public async Task<bool> AddNote(NoteModel noteModel)
+        public async Task<NoteModel> GetOne(int? id)
+        {
+            return (await _db.noteModels.FindAsync(id));
+        }
+
+        public async Task<bool> Add(NoteModel noteModel)
         {
             if (noteModel != null)
             {
@@ -32,7 +37,7 @@ namespace To_Do_Note_Net_Core_5_API.Repository
         }
 
 
-        public async Task<bool> EditNote(NoteModel noteModel)
+        public async Task<bool> Edit(NoteModel noteModel)
         {
             if (noteModel != null)
             {
@@ -41,6 +46,18 @@ namespace To_Do_Note_Net_Core_5_API.Repository
             }
 
             return true;
+        }
+
+        public async Task<bool> Delete(NoteModel noteModel)
+        {
+            if (noteModel != null)
+            {
+                _db.noteModels.Remove(noteModel);
+                await _db.SaveChangesAsync();
+                return true;
+            }
+
+            return false;
         }
 
     }

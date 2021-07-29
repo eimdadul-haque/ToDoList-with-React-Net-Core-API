@@ -18,7 +18,18 @@ namespace To_Do_Note_Net_Core_5_API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllNotes()
         {
-            return Ok(await _repo.AllNotes());
+            return Ok(await _repo.GetAll());
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> EditNote([FromBody]NoteModel noteModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var res = await _repo.Edit(noteModel);
+                return Ok(noteModel);
+            }
+            return NoContent();
         }
 
         [HttpPost]
@@ -26,19 +37,21 @@ namespace To_Do_Note_Net_Core_5_API.Controllers
         {
             if (ModelState.IsValid)
             {
-                var res = await _repo.AddNote(noteModel);
+                var res = await _repo.Add(noteModel);
+                return Ok(noteModel);
             }
-            return Ok(noteModel);
+            return NoContent();
         }
 
-        [HttpPost]
-        public async Task<IActionResult> EditNote(NoteModel noteModel)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteNote([FromRoute]int? id)
         {
-            if (ModelState.IsValid)
+            if (id != null)
             {
-                var res = await _repo.EditNote(noteModel);
+                var res =  await _repo.Delete(await _repo.GetOne(id));
+                return Ok(await _repo.GetAll());
             }
-            return Ok(noteModel);
+            return Ok();
         }
 
     }
