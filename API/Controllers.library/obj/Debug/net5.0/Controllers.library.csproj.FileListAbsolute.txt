@@ -1,0 +1,12 @@
+C:\Users\EIMDADUL\Desktop\To Do Note Net Core 5\Controllers.library\bin\Debug\net5.0\Controllers.library.deps.json
+C:\Users\EIMDADUL\Desktop\To Do Note Net Core 5\Controllers.library\bin\Debug\net5.0\Controllers.library.dll
+C:\Users\EIMDADUL\Desktop\To Do Note Net Core 5\Controllers.library\bin\Debug\net5.0\ref\Controllers.library.dll
+C:\Users\EIMDADUL\Desktop\To Do Note Net Core 5\Controllers.library\bin\Debug\net5.0\Controllers.library.pdb
+C:\Users\EIMDADUL\Desktop\To Do Note Net Core 5\Controllers.library\obj\Debug\net5.0\Controllers.library.csprojAssemblyReference.cache
+C:\Users\EIMDADUL\Desktop\To Do Note Net Core 5\Controllers.library\obj\Debug\net5.0\Controllers.library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EIMDADUL\Desktop\To Do Note Net Core 5\Controllers.library\obj\Debug\net5.0\Controllers.library.AssemblyInfoInputs.cache
+C:\Users\EIMDADUL\Desktop\To Do Note Net Core 5\Controllers.library\obj\Debug\net5.0\Controllers.library.AssemblyInfo.cs
+C:\Users\EIMDADUL\Desktop\To Do Note Net Core 5\Controllers.library\obj\Debug\net5.0\Controllers.library.csproj.CoreCompileInputs.cache
+C:\Users\EIMDADUL\Desktop\To Do Note Net Core 5\Controllers.library\obj\Debug\net5.0\Controllers.library.dll
+C:\Users\EIMDADUL\Desktop\To Do Note Net Core 5\Controllers.library\obj\Debug\net5.0\ref\Controllers.library.dll
+C:\Users\EIMDADUL\Desktop\To Do Note Net Core 5\Controllers.library\obj\Debug\net5.0\Controllers.library.pdb
