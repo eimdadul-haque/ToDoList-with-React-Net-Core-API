@@ -22,7 +22,7 @@ namespace To_Do_Note_Net_Core_5_API.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> EditNote([FromBody]NoteModel noteModel)
+        public async Task<IActionResult> EditNote( [FromBody]NoteModel noteModel)
         {
             if (ModelState.IsValid)
             {
